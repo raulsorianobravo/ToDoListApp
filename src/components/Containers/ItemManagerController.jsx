@@ -19,7 +19,7 @@ const ItemManagerController = () => {
         <div className='ItemManagerController'>
         ItemManagerController
         <ItemForm addItem={addItem} />
-        <Item />
+        {listItems.map((item,index) => <Item item = {item} key={index} />)}        
     </div>
   )
 }
