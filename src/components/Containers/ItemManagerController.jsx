@@ -20,11 +20,15 @@ const ItemManagerController = () => {
         console.log(listItems)
     }
 
+    const deleteItem = id => {
+        setListItems(listItems.filter(item => item.id !=id))
+      }
+
     return (
         <div className='ItemManagerController'>
         ItemManagerController
         <ItemForm addItem={addItem} />
-        {listItems.map((item,index) => <Item item = {item} key={index} toggleComplete={toggleComplete} />)}        
+        {listItems.map((item,index) => <Item item = {item} key={index} toggleComplete={toggleComplete} deleteItem={deleteItem}/>)}        
     </div>
   )
 }
