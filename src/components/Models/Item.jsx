@@ -9,14 +9,14 @@ const Item = props => {
 
   return (
     <div className='Item'>
-        <FontAwesomeIcon icon = {faCheckCircle} onClick={() => toggleComplete(item.id)}/>
+        <FontAwesomeIcon className='check-icon' icon = {faCheckCircle} onClick={() => toggleComplete(item.id)}/>
     <div>
       <p className={`${item.isCompleted ? 'completed' : ""}`}> {item.id}. {item.title}</p>
       <p className={`${item.isCompleted ? 'completed' : ""}`}> {item.description}</p>
       </div>
       <div>
-        <FontAwesomeIcon icon = {faPenToSquare} onClick={() => editItem(item.id)} />
-        <FontAwesomeIcon icon = {faTrash} onClick={() => deleteItem(item.id)}/>
+        <FontAwesomeIcon className='edit-icon' icon = {faPenToSquare} onClick={() => editItem(item.id)} />
+        <FontAwesomeIcon className='delete-icon' icon = {faTrash} onClick={() => deleteItem(item.id)}/>
       </div>
     </div>  )
 }
