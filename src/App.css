@@ -179,4 +179,8 @@ h1 {
 .check-icon {
   cursor: pointer;
 }
+.noedit-icon{
+  display: none;
+  cursor:not-allowed;
+}
  

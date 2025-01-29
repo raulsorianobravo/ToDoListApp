@@ -15,7 +15,7 @@ const Item = props => {
       <p className={`${item.isCompleted ? 'completed' : ""}`}> {item.description}</p>
       </div>
       <div>
-        <FontAwesomeIcon className='edit-icon' icon = {faPenToSquare} onClick={() => editItem(item.id)} />
+        <FontAwesomeIcon className={`${item.isCompleted ? 'noedit-icon' : "edit-icon"}`} icon = {faPenToSquare} onClick={() => editItem(item.id)} />
         <FontAwesomeIcon className='delete-icon' icon = {faTrash} onClick={() => deleteItem(item.id)}/>
       </div>
     </div>  )
