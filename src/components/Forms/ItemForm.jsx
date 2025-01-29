@@ -48,7 +48,7 @@ const ItemForm = props => {
          <input type="text" className='item-input' value={title} placeholder='Title' onChange={handleChangeTitle}>
         </input>
         <br></br>
-        <input type="text" className='item-input' value={description} placeholder='Description' on onChange={handleChangeDescription}>
+        <input type="text" className='item-input' value={description} placeholder='Description' onChange={handleChangeDescription}>
         </input>
         <br></br>
         <button type="submit" className='item-btn'>Add Item</button>

@@ -42,7 +42,7 @@ const ItemManagerController = () => {
         <ItemForm addItem={addItem} />
         {listItems.map( (item,index) => 
             (item.isEditing 
-            ? (<EditItemForm editItem={editItemForm} item={item}/>) 
+            ? (<EditItemForm key={index} editItem={editItemForm} item={item}/>) 
             : (<Item item = {item} key={index} toggleComplete={toggleComplete} deleteItem={deleteItem} editItem={editItem}/>)
             )
         )}        
