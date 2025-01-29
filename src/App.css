@@ -93,6 +93,14 @@ h1 {
   width: 100%;
   margin-bottom: 1rem;
 }
+.ItemFormEdit {
+  width: 100%;
+  align-items: c;
+  margin-bottom: 1rem;
+  border: #ffa958 solid 0.5px;
+  border-radius: 5px;
+  background: #1A1A40;
+}
 
 .todo-input {
   outline: none;
@@ -111,6 +119,17 @@ h1 {
   padding: 0.5rem 1rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  width: 300px;
+  color: #fff;
+}
+
+.item-input-edit {
+  outline: none;
+  background: none;
+  border: 1px solid #ff5858;
+  padding: 0.5rem 1rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
   width: 300px;
   color: #fff;
 }
@@ -136,6 +155,15 @@ h1 {
   border: none;
   padding: 0.55rem;
   cursor: pointer;
+}
+
+.item-btn-edit {
+  background: #ff5858;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+  margin-bottom: 3px;
 }
 
 .Todo {
@@ -182,5 +210,8 @@ h1 {
 .noedit-icon{
   display: none;
   cursor:not-allowed;
+}
+.placeholder {
+  color: #ffffff4d;
 }
  

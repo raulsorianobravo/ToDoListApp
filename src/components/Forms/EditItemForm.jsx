@@ -39,19 +39,19 @@ const EditItemForm = props => {
     //===============================================================
   
     return (
-    <div>ItemForm
-        <form className='ItemForm' onSubmit={handleSubmit}>ItemForm
+    <div>
+        <form className='ItemFormEdit' onSubmit={handleSubmit}><h7 className="placeholder">Edit the values</h7>
         <br></br>
-        <input type="text" className='item-input' value={id} placeholder='Edit Item Number' onChange={handleChangeId}>
+        <input type="text" className='item-input-edit' value={id} placeholder='Edit Item Number' onChange={handleChangeId}>
         </input>
         <br></br>
-         <input type="text" className='item-input' value={title} placeholder='Edit Title' onChange={handleChangeTitle}>
+         <input type="text" className='item-input-edit' value={title} placeholder='Edit Title' onChange={handleChangeTitle}>
         </input>
         <br></br>
-        <input type="text" className='item-input' value={description} placeholder='Edit Description' onChange={handleChangeDescription}>
+        <input type="text" className='item-input-edit' value={description} placeholder='Edit Description' onChange={handleChangeDescription}>
         </input>
         <br></br>
-        <button type="submit" className='item-btn'>Update Item</button>
+        <button type="submit" className='item-btn-edit'>Update Item</button>
         </form>
     </div>
   )
