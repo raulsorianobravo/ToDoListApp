@@ -1,18 +1,19 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPenToSquare } from '@fortawesome/free-regular-svg-icons'
+import { faCheckCircle, faPenToSquare } from '@fortawesome/free-regular-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 const Item = props => {
 
-    const {item} = props
+    const {item, toggleComplete} = props
 
   return (
     <div className='Item'>
-      <p>{item.id}</p>
-      <p>{item.title}</p>
-      <p>{item.description}</p>
-
+        <FontAwesomeIcon icon = {faCheckCircle} onClick={() => toggleComplete(item.id)}/>
+    <div>
+      <p className={`${item.isCompleted ? 'completed' : ""}`}> {item.id}. {item.title}</p>
+      <p className={`${item.isCompleted ? 'completed' : ""}`}> {item.description}</p>
+      </div>
       <div>
         <FontAwesomeIcon icon = {faPenToSquare} />
         <FontAwesomeIcon icon = {faTrash} />

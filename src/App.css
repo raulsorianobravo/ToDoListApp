@@ -148,6 +148,16 @@ h1 {
   border-radius: 5px;
   margin-bottom: 1rem;
 }
+.Item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffa958;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
 
 .fa-trash {
   margin-left: 0.75rem;
