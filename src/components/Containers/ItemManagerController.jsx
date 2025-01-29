@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ItemForm from '../Forms/ItemForm'
 import {v4 as uuidv4} from 'uuid'
+import Item from '../Models/Item'
 
 uuidv4()
 
@@ -18,6 +19,7 @@ const ItemManagerController = () => {
         <div className='ItemManagerController'>
         ItemManagerController
         <ItemForm addItem={addItem} />
+        <Item />
     </div>
   )
 }
