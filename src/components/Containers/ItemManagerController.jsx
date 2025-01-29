@@ -42,8 +42,35 @@ const ItemManagerController = () => {
 
   //=========================================================================
     
-  const toggleComplete = id =>{
-      setListItems(listItems.map(item => item.id === id ? {...item, isCompleted: !item.isCompleted}:item))
+  const toggleComplete = async itemOld =>{
+      
+    const item = {
+      "id": itemOld.id,
+      "title": itemOld.title,
+      "description": itemOld.description,
+      "isCompleted": !itemOld.isCompleted,
+      "createdAt": itemOld.createdAt
+  }
+
+  console.log(itemOld.id)
+  const idTemp = itemOld.id
+  const res = await fetch(`https://localhost:7119/api/ToDoList/${itemOld.id}`, {
+      method: 'PUT',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(item)
+      })
+  
+  //.then(res => res.text()) // or res.json()
+  //.then(res => console.log(res))
+  //const dataList = res.json()
+
+  const resGet = await fetch('https://localhost:7119/api/ToDoList')
+  const dataList = await resGet.json()
+  setListItems([...dataList]);  
+    
+    
+    
+  setListItems(listItems.map(item => item.id === itemOld.id ? {...item, isCompleted: !item.isCompleted}:item))
       console.log(listItems)
   }
   //=========================================================================

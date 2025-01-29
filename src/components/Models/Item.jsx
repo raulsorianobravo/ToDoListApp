@@ -9,7 +9,7 @@ const Item = props => {
 
   return (
     <div className='Item'>
-        <FontAwesomeIcon className='check-icon' icon = {faCheckCircle} onClick={() => toggleComplete(item.id)}/>
+        <FontAwesomeIcon className='check-icon' icon = {faCheckCircle} onClick={() => toggleComplete(item)}/>
     <div>
       <p className={`${item.isCompleted ? 'completed' : ""}`}> {item.id}. {item.title}</p>
       <p className={`${item.isCompleted ? 'completed' : ""}`}> {item.description}</p>
