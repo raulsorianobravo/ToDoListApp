@@ -10,6 +10,9 @@ const ItemManagerController = () => {
     
    const [listItems, setListItems ] = useState([])
 
+   const api = import.meta.env.VITE_APP_API_URI
+   //console.log(api)
+
    const addItem = (id, title, description) => {
     console.log("received:", id,title,description)    
     setListItems([...listItems, {uid: uuidv4(), id:id, title: title , description: description, createAt:(new Date()).toJSON(), isCompleted:false, isEditing:false}])
@@ -39,8 +42,9 @@ const ItemManagerController = () => {
           //--- Update the list at evey change. Not Forced the update
     useEffect(() => {
       const LoadDataAPI = async () => {
-          const res = await fetch('https://localhost:7119/api/ToDoList')
-          const dataList = await res.json()
+        //const res = await fetch('https://localhost:7119/api/ToDoList')
+        const res = await fetch(api)
+        const dataList = await res.json()
           setListItems([...dataList]);
       }
       LoadDataAPI()
