@@ -26,11 +26,15 @@ const ItemForm = () => {
         console.log(description)
     }
   
+    const handleSubmit = e => {
+        e.preventDefault()
+        console.log(id, title, description)
+    }
     //===============================================================
   
     return (
     <div>ItemForm
-        <form className='ItemForm'>ItemForm
+        <form className='ItemForm' onSubmit={handleSubmit}>ItemForm
         <br></br>
         <input type="text" className='item-input' placeholder='Item Number' onChange={handleChangeId}>
         </input>
