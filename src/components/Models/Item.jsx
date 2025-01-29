@@ -11,8 +11,8 @@ const Item = props => {
     <div className='Item'>
         <FontAwesomeIcon className='check-icon' icon = {faCheckCircle} onClick={() => toggleComplete(item)}/>
     <div>
-      <p className={`${item.isCompleted ? 'completed' : ""}`}> {item.id}. {item.title}</p>
-      <p className={`${item.isCompleted ? 'completed' : ""}`}> {item.description}</p>
+      <p className={`${item.isCompleted ? 'completed' : "normal"}`}> {item.id}. {item.title}</p>
+      <p className={`${item.isCompleted ? 'completed' : "normal"}`}> {item.description}</p>
       </div>
       <div>
         <FontAwesomeIcon className={`${item.isCompleted ? 'noedit-icon' : "edit-icon"}`} icon = {faPenToSquare} onClick={() => editItem(item.id)} />

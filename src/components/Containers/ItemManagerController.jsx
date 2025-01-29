@@ -3,6 +3,8 @@ import ItemForm from '../Forms/ItemForm'
 import {v4 as uuidv4} from 'uuid'
 import Item from '../Models/Item'
 import EditItemForm from '../Forms/EditItemForm'
+import reactLogo from '../../assets/react.svg'
+
 
 uuidv4()
 
@@ -152,8 +154,11 @@ const ItemManagerController = () => {
   //=========================================================================
   
   return (
-        <div className='ItemManagerController'>
-        ItemManagerController
+    <div className='ItemManagerController'>
+              <a href="https://react.dev" target="_blank">
+            <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+        <h2>Item Manager</h2>
         <ItemForm addItem={addItem} />
         {listItems.map( (item,index) => 
             (item.isEditing 

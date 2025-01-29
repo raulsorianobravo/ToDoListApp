@@ -52,7 +52,7 @@
 }
 
 body {
-  background: #5877ff;
+  background: #283655;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +78,7 @@ h1 {
 
 .ItemManagerController {
   width: 500px;
-  background: #1A1A40;
+  background: #1E1F26;
   margin-top: 5rem;
   padding: 2rem;
   border-radius: 5px;
@@ -97,9 +97,9 @@ h1 {
   width: 100%;
   align-items: c;
   margin-bottom: 1rem;
-  border: #ffa958 solid 0.5px;
+  border: #d0e1f9 solid 0.5px;
   border-radius: 5px;
-  background: #1A1A40;
+  background: #263655;
 }
 
 .todo-input {
@@ -126,12 +126,13 @@ h1 {
 .item-input-edit {
   outline: none;
   background: none;
-  border: 1px solid #ff5858;
+  border: 0.1px solid #555555;
   padding: 0.5rem 1rem;
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
   width: 300px;
   color: #fff;
+  border-radius: 5px;
 }
 
 .todo-input::placeholder {
@@ -158,12 +159,13 @@ h1 {
 }
 
 .item-btn-edit {
-  background: #ff5858;
+  background: #a01d25;
   color: #fff;
   border: none;
   padding: 0.55rem;
   cursor: pointer;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
+  margin-top: 3px;
 }
 
 .Todo {
@@ -180,7 +182,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #ffa958;
+  background: #4D648D;
   color: #fff;
   padding: 0.75rem 1rem;
   border-radius: 5px;
@@ -200,6 +202,12 @@ h1 {
   color: #242424;
   text-decoration: line-through;
   cursor: pointer;
+}
+.normal {
+  color: #c9c9c9;
+  text-decoration:solid;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
 }
 
 .edit-icon,

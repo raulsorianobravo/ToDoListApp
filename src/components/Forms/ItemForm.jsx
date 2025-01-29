@@ -39,8 +39,8 @@ const ItemForm = props => {
     //===============================================================
   
     return (
-    <div>ItemForm
-        <form className='ItemForm' onSubmit={handleSubmit}>ItemForm
+    <div>
+        <form className='ItemForm' onSubmit={handleSubmit}><h6>Add a new item</h6>
         <br></br>
         <input type="text" className='item-input' value={id} placeholder='Item Number' onChange={handleChangeId}>
         </input>

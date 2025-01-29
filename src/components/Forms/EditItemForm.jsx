@@ -40,7 +40,7 @@ const EditItemForm = props => {
   
     return (
     <div>
-        <form className='ItemFormEdit' onSubmit={handleSubmit}><h7 className="placeholder">Edit the values</h7>
+        <form className='ItemFormEdit' onSubmit={handleSubmit}><h4 className="placeholder">Edit the values</h4>
         <br></br>
         <input type="text" className='item-input-edit' value={id} placeholder='Edit Item Number' onChange={handleChangeId}>
         </input>
