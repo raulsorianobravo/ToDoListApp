@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ItemForm from '../Forms/ItemForm'
 import {v4 as uuidv4} from 'uuid'
 import Item from '../Models/Item'
@@ -35,6 +35,16 @@ const ItemManagerController = () => {
         console.log(itemid, itemTitle, ItemDescription)
         setListItems(listItems.map(item => item.id === id ? {...item, id:itemid, title:itemTitle, description:ItemDescription, isEditing: !item.isEditing}:item))
       }
+
+          //--- Update the list at evey change. Not Forced the update
+    useEffect(() => {
+      const LoadDataAPI = async () => {
+          const res = await fetch('https://localhost:7119/api/ToDoList')
+          const dataList = await res.json()
+          setListItems([...dataList]);
+      }
+      LoadDataAPI()
+    }, [])
 
     return (
         <div className='ItemManagerController'>
