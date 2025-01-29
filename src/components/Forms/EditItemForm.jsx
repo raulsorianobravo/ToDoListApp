@@ -5,9 +5,9 @@ const EditItemForm = props => {
     const {editItem, item} = props
 
     //===============================================================
-    const [id, setID] = useState("")
-    const [title,setTitle] = useState("")
-    const [description, setDescription] = useState("")
+    const [id, setID] = useState(item.id)
+    const [title,setTitle] = useState(item.title)
+    const [description, setDescription] = useState(item.description)
 
     //===============================================================
     const handleChangeId = e => {
@@ -48,7 +48,7 @@ const EditItemForm = props => {
          <input type="text" className='item-input' value={title} placeholder='Edit Title' onChange={handleChangeTitle}>
         </input>
         <br></br>
-        <input type="text" className='item-input' value={description} placeholder='Edit Description' on onChange={handleChangeDescription}>
+        <input type="text" className='item-input' value={description} placeholder='Edit Description' onChange={handleChangeDescription}>
         </input>
         <br></br>
         <button type="submit" className='item-btn'>Update Item</button>
