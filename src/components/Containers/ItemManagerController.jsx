@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ItemForm from '../Forms/ItemForm'
 import {v4 as uuidv4} from 'uuid'
 import Item from '../Models/Item'
+import EditItemForm from '../Forms/EditItemForm'
 
 uuidv4()
 
@@ -24,11 +25,27 @@ const ItemManagerController = () => {
         setListItems(listItems.filter(item => item.id !=id))
       }
 
+      const editItem = id => {
+        setListItems(listItems.map(item => item.id === id ? {...item, isEditing: !item.isEditing}:item))
+        console.log(listItems)
+
+      }
+
+      const editItemForm = (itemid, itemTitle, ItemDescription, id) => {
+        console.log(itemid, itemTitle, ItemDescription)
+        setListItems(listItems.map(item => item.id === id ? {...item, id:itemid, title:itemTitle, description:ItemDescription, isEditing: !item.isEditing}:item))
+      }
+
     return (
         <div className='ItemManagerController'>
         ItemManagerController
         <ItemForm addItem={addItem} />
-        {listItems.map((item,index) => <Item item = {item} key={index} toggleComplete={toggleComplete} deleteItem={deleteItem}/>)}        
+        {listItems.map( (item,index) => 
+            (item.isEditing 
+            ? (<EditItemForm editItem={editItemForm} item={item}/>) 
+            : (<Item item = {item} key={index} toggleComplete={toggleComplete} deleteItem={deleteItem} editItem={editItem}/>)
+            )
+        )}        
     </div>
   )
 }

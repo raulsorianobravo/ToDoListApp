@@ -5,7 +5,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 const Item = props => {
 
-    const {item, toggleComplete, deleteItem} = props
+    const {item, toggleComplete, deleteItem, editItem} = props
 
   return (
     <div className='Item'>
@@ -15,7 +15,7 @@ const Item = props => {
       <p className={`${item.isCompleted ? 'completed' : ""}`}> {item.description}</p>
       </div>
       <div>
-        <FontAwesomeIcon icon = {faPenToSquare}  />
+        <FontAwesomeIcon icon = {faPenToSquare} onClick={() => editItem(item.id)} />
         <FontAwesomeIcon icon = {faTrash} onClick={() => deleteItem(item.id)}/>
       </div>
     </div>  )
