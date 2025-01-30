@@ -5,7 +5,8 @@
 This project is a ToDo web application that request information to the API Rest of ToDoListApiNET.
 The app let users create, modify and delete tasks
 
-[![Watch the video](https://raw.githubusercontent.com/raulsorianobravo/ToDoListApp/main/public/init.jpg)](https://raw.githubusercontent.com/raulsorianobravo/ToDoListApp/main/public/0130.mp4)
+##Demo
+[![Watch the video](https://raw.githubusercontent.com/raulsorianobravo/ToDoListApp/main/public/thumb.jpg)](https://raw.githubusercontent.com/raulsorianobravo/ToDoListApp/main/public/0130.mp4)
 
 
 
