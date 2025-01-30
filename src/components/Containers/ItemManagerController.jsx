@@ -4,6 +4,7 @@ import {v4 as uuidv4} from 'uuid'
 import Item from '../Models/Item'
 import EditItemForm from '../Forms/EditItemForm'
 import reactLogo from '../../assets/react.svg'
+import { Footer } from './Footer'
 
 
 uuidv4()
@@ -165,7 +166,8 @@ const ItemManagerController = () => {
             ? (<EditItemForm key={index} editItem={editItemForm} item={item}/>) 
             : (<Item item = {item} key={index} toggleComplete={toggleComplete} deleteItem={deleteItem} editItem={editItem}/>)
             )
-        )}        
+        )}
+        <Footer />        
     </div>
   )
 }
