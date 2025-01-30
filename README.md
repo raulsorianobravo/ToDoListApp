@@ -6,6 +6,7 @@ This project is a ToDo web application that request information to the API Rest 
 The app let users create, modify and delete tasks
 
 ##Demo
+
 [![Watch the video](https://raw.githubusercontent.com/raulsorianobravo/ToDoListApp/main/public/thumb.jpg)](https://raw.githubusercontent.com/raulsorianobravo/ToDoListApp/main/public/0130.mp4)
 
 
